@@ -1,1 +1,16 @@
 theme: minima
+
+title: Sterling Brick & Stone Masonry
+author: Michael Radivoi
+description: >- 
+  Business webiste for Sterling Brick & Stone Masonry, a masonry company specializing in brick and stone work.
+  This site showcases our services, portfolio, and contact information.
+  It is designed to be clean, modern, and easy to navigate.
+  The site is built using Jekyll and hosted on GitHub Pages.
+baseurl: ""
+url: "https://radivoi.github.io/STERLING/"
+github_username: Radivoi
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
