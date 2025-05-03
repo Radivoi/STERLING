@@ -82,7 +82,7 @@ hr.star-primary:after {
 
 header {
     text-align: center;
-    color: #fff;
+    color: #1A1A1A;
     background: #{{ site.color.primary }};
 }
 
@@ -110,10 +110,17 @@ header .intro-text .skills {
     color: #1A1A1A
 }
 
+@media(max-width:767px) {
+    .navbar-header.page-scroll {
+        display: flex;
+        text-align: center;
+        padding-bottom: 15px;
+    }
+}
+
 @media(min-width:768px) {
     header .container {
-        padding-top: 200px;
-        padding-bottom: 100px;
+        padding-top: 150px;
     }
 
     header .intro-text .name {
@@ -127,7 +134,7 @@ header .intro-text .skills {
 
 @media(min-width:768px) {
     .navbar-fixed-top {
-        padding: 25px 0;
+        padding: 5px 0;
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
         transition: padding .3s;
@@ -372,7 +379,7 @@ footer .footer-col {
 }
 
 footer .footer-below {
-    padding: 25px 0;
+    padding: 5px 0;
     background-color: #{{ site.color.secondary-dark }};
 }
 
@@ -482,4 +489,14 @@ footer .footer-below {
 .modal.fade.in {
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
+}
+section#contact, .container.portfolio-flex-grid, input::placeholder, textarea::placeholder {
+    color: #F4F4F4 !important;
+}
+hr.star-primary::after {
+    color: #F4F4F4;
+    background: #1A1A1A;
+}
+hr.star-primary {
+    border-color: #F4F4F4;
 }
