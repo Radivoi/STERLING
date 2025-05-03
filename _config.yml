@@ -4,7 +4,6 @@ email: your-email@domain.com
 url: https://radivoi.github.io/STERLING/
 description: "Sterling Brick & Stone Masonry is a family owned and operated business serving the Waterloo region. We specialize in all types of masonry work, including brick, stone, and concrete. Our team of skilled craftsmen are dedicated to providing the highest quality workmanship and customer service. Whether you need a new patio, walkway, or retaining wall, we have the experience and expertise to get the job done right."
 baseurl: ""
-theme: "freelancer"
 author: "Michael Radivoi"
 author_email: "michaelradivoi@gmail.com"
 keywords: "your keywords, separated by commas"
@@ -30,17 +29,17 @@ meta_author: LastName FirstName
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
-  primary: 18bc9c #80B3FF
+  primary: C88C52 #C88C52
   primary-rgb: "24,288,156" #"128,179,255"
-  secondary: 2c3e50 #FD6E8A
+  secondary: 1A1A1A #1A1A1A
   secondary-dark: 233140 #A2122F
 
 # Footer settings
 footer:
-  copyright: &copy; 2025 Sterling Brick & Stone Masonry
+  copyright: 2025 Sterling Brick & Stone Masonry
   location: Waterloo, Ontario, Canada
   social: Around the Web
-  credits: Credits
+#  credits: Credits
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
@@ -61,7 +60,7 @@ address:
   - line: Beverly Hills, CA 90210
 
 # Credits content
-credits: 'Freelancer is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'
+#credits: 'Freelancer is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'
 
 # Build settings
 markdown: kramdown
