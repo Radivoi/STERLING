@@ -29,7 +29,7 @@ meta_author: LastName FirstName
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
-  primary: D8CFBF
+  primary: FFF9EF
   primary-rgb: "226,199,153"
   secondary: 1A1A1A
   secondary-dark: 8F2D02

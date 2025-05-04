@@ -71,10 +71,6 @@ hr.star-primary {
     border-color: #{{ site.color.secondary }};
 }
 
-hr.star-primary:after {
-    color: #{{ site.color.secondary }};
-    background-color: #fff;
-}
 
 .img-centered {
     margin: 0 auto;
@@ -206,8 +202,13 @@ section h2 {
 }
 
 section.success {
-    color: #1A1A1A;
-    background: #{{ site.color.primary }};
+    color: #{{ site.color.primary }};
+    background: #{{ site.color.secondary }};
+}
+
+section.success hr.star-light:after, section.success hr.star-light {
+    background-color: #{{ site.color.secondary }}; 
+    border-color: #{{ site.color.primary}}
 }
 
 @media(max-width:767px) {
@@ -511,14 +512,11 @@ footer .footer-below {
     -webkit-transform: translateZ(0);
 }
 section#contact, .container.portfolio-flex-grid, input::placeholder, textarea::placeholder {
-    color: #F4F4F4 !important;
+    color: #{{ site.color.secondary}} !important;
 }
 hr.star-primary::after {
     color: #{{ site.color.secondary-dark}};
-    background: #1A1A1A;
-}
-hr.star-primary {
-    border-color: #F4F4F4;
+    background: #{{ site.color.primary}};
 }
 img.img-responsive {
     max-height: 300px;
