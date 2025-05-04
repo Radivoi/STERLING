@@ -29,10 +29,10 @@ meta_author: LastName FirstName
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
-  primary: E2C799 #E2C799
-  primary-rgb: "200,140,82" #"200,140,82"
-  secondary: 1A1A1A #1A1A1A
-  secondary-dark: 8F2D02 #8F2D02
+  primary: E2C799
+  primary-rgb: "226,199,153"
+  secondary: 1A1A1A
+  secondary-dark: 8F2D02
 
 # Footer settings
 footer:
