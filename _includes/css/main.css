@@ -89,21 +89,16 @@ header {
 header .container {
     padding-top: 100px;
     padding-bottom: 50px;
-    background-image: url('../images/brickwallbanner.jpg');
+    background-image: url('../../images/brickwallbanner.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -ms-background-size: cover;
     width: 100%;
     margin: 0px;
 }
 
 header .container .img-responsive {
-    background: #ffffffc7
+    background: #ffffffc7;
     max-width: 200px;
 }
 
