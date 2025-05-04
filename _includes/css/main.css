@@ -63,7 +63,7 @@ hr.star-light {
 }
 
 hr.star-light:after {
-    color: #1A1A1A;
+    color: #{{ site.color.secondary-dark }};
     background-color: #{{ site.color.primary }};
 }
 
@@ -494,9 +494,13 @@ section#contact, .container.portfolio-flex-grid, input::placeholder, textarea::p
     color: #F4F4F4 !important;
 }
 hr.star-primary::after {
-    color: #F4F4F4;
+    color: #{{ site.color.secondary-dark}};
     background: #1A1A1A;
 }
 hr.star-primary {
     border-color: #F4F4F4;
+}
+img.img-responsive {
+    max-height: 300px;
+    place-self: stretch;
 }
