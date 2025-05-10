@@ -1,5 +1,5 @@
 <!-- Navigation -->
-<div id="announcement-bar" class="announcement-bar container" style="background-color: #{{ site.color.primary }}; text-align: right; padding-top: 5px; padding-bottom: 5px;"> 
+<div id="announcement-bar" class="announcement-bar container" style="background-color: #{{ site.color.primary }}; padding-top: 5px; padding-bottom: 5px;"> 
     <a href="mailto:example@example.com" style="margin-right: 20px; color: #333; text-decoration: none;">example@example.com</a>
     <a href="tel:+1234567890" style="color: #333; text-decoration: none;">+1 (234) 567-890</a>
 </div>
@@ -7,9 +7,15 @@
   .announcement-bar {
     background-color: #f8d7da;
     color: #721c24;
-    text-align: center;
+    text-align: right;
+    font-weight: bold;
     padding: 10px 0;
     width: 100%;
+  }
+  @media(max-width:767px) {
+    .announcement-bar {
+      text-align: center;
+    }
   }
   .navbar-fixed-top {
     margin-top: 30px; /* Adjust this value to match the height of the announcement-bar */
