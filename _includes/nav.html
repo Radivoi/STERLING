@@ -1,4 +1,21 @@
 <!-- Navigation -->
+<div id="announcement-bar" class="announcement-bar container" style="background-color: #{{ site.color.primary }}; text-align: right; padding-top: 5px; padding-bottom: 5px;"> 
+    <a href="mailto:example@example.com" style="margin-right: 20px; color: #333; text-decoration: none;">example@example.com</a>
+    <a href="tel:+1234567890" style="color: #333; text-decoration: none;">+1 (234) 567-890</a>
+</div>
+<style>
+  .announcement-bar {
+    background-color: #f8d7da;
+    color: #721c24;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+  }
+  .navbar-fixed-top {
+    margin-top: 30px; /* Adjust this value to match the height of the announcement-bar */
+    transition: margin-top 0.5s ease; /* Smooth transition */
+  }
+</style>
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -33,3 +50,17 @@
   </div>
   <!-- /.container-fluid -->
 </nav>
+
+<script>
+  document.addEventListener('scroll', function () {
+    const announcementBar = document.getElementById('announcement-bar');
+    const navbar = document.querySelector('.navbar-fixed-top');
+    const announcementBarHeight = announcementBar.offsetHeight;
+
+    if (window.scrollY > announcementBarHeight) {
+      navbar.style.marginTop = '0';
+    } else {
+      navbar.style.marginTop = `${announcementBarHeight}px`;
+    }
+  });
+</script>
