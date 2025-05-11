@@ -205,7 +205,6 @@ section.success {
     color: #{{ site.color.primary }};
     background: #{{ site.color.secondary }};
 }
-
 section.success hr.star-light:after, section.success hr.star-light {
     background-color: #{{ site.color.secondary }}; 
     border-color: #{{ site.color.primary}}
@@ -221,19 +220,19 @@ section.success hr.star-light:after, section.success hr.star-light {
     }
 }
 
-#portfolio .portfolio-item {
+#portfolio-container .portfolio-item {
     right: 0;
     margin: 0 0 15px;
 }
 
-#portfolio .portfolio-item .portfolio-link {
+#portfolio-container .portfolio-item .portfolio-link {
     display: block;
     position: relative;
     margin: 0 auto;
     max-width: 400px;
 }
 
-#portfolio .portfolio-item .portfolio-link .caption {
+#portfolio-container .portfolio-item .portfolio-link .caption {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -244,11 +243,11 @@ section.success hr.star-light:after, section.success hr.star-light {
     transition: all ease .5s;
 }
 
-#portfolio .portfolio-item .portfolio-link .caption:hover {
+#portfolio-container .portfolio-item .portfolio-link .caption:hover {
     opacity: 1;
 }
 
-#portfolio .portfolio-item .portfolio-link .caption .caption-content {
+#portfolio-container .portfolio-item .portfolio-link .caption .caption-content {
     position: absolute;
     top: 50%;
     width: 100%;
@@ -259,21 +258,21 @@ section.success hr.star-light:after, section.success hr.star-light {
     color: #1A1A1A;
 }
 
-#portfolio .portfolio-item .portfolio-link .caption .caption-content i {
+#portfolio-container .portfolio-item .portfolio-link .caption .caption-content i {
     margin-top: -12px;
 }
 
-#portfolio .portfolio-item .portfolio-link .caption .caption-content h3,
-#portfolio .portfolio-item .portfolio-link .caption .caption-content h4 {
+#portfolio-container .portfolio-item .portfolio-link .caption .caption-content h3,
+#portfolio-container .portfolio-item .portfolio-link .caption .caption-content h4 {
     margin: 0;
 }
 
-#portfolio * {
+#portfolio-container * {
     z-index: 2;
 }
 
 @media(min-width:767px) {
-    #portfolio .portfolio-item {
+    #portfolio-container-container .portfolio-item {
         margin: 0 0 30px;
     }
 }
