@@ -64,9 +64,21 @@
     const announcementBarHeight = announcementBar.offsetHeight;
 
     if (window.scrollY > announcementBarHeight) {
+      navbar.style.position = 'fixed';
       navbar.style.marginTop = '0';
     } else {
+      navbar.style.position = 'absolute';
       navbar.style.marginTop = `${announcementBarHeight}px`;
     }
+  });
+
+  // Initialize the navbar position on page load
+  window.addEventListener('load', function () {
+    const announcementBar = document.getElementById('announcement-bar');
+    const navbar = document.querySelector('.navbar-fixed-top');
+    const announcementBarHeight = announcementBar.offsetHeight;
+
+    navbar.style.position = 'absolute';
+    navbar.style.marginTop = `${announcementBarHeight}px`;
   });
 </script>
