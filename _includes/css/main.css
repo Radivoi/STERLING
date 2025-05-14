@@ -371,7 +371,7 @@ section.success hr.star-light:after, section.success hr.star-light {
 }
 
 .floating-label-form-group-with-focus label {
-    color: #{{ site.color.primary }};
+    color: #{{ site.color.secondary-dark }};
 }
 
 form .row:first-child .floating-label-form-group {
@@ -510,9 +510,19 @@ footer .footer-below {
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
 }
-section#contact, .container.portfolio-flex-grid, input::placeholder, textarea::placeholder {
+section#contact, .container.portfolio-flex-grid {
     color: #{{ site.color.secondary}} !important;
     font-weight: bold;
+}
+input::placeholder, textarea::placeholder {
+    color: #545454 !important;
+    opacity: 80%;
+    font-weight: bold;  
+}
+form#contactForm {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 hr.star-primary::after {
     color: #{{ site.color.secondary-dark}};
