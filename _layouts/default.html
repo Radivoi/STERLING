@@ -93,10 +93,13 @@
 <script>
   window.addEventListener("load", function () {
     const loader = document.getElementById("loader");
-    loader.style.opacity = "0"; // Fade out the loader
+    // Wait before starting fade-out
     setTimeout(() => {
-      loader.style.display = "none"; // Remove it from the DOM
-    }, 100); // Wait for the fade-out animation
+      loader.style.opacity = "0"; // Start fade out
+      setTimeout(() => {
+        loader.style.display = "none"; // Remove from DOM after fade-out
+      }, 600); // Adjust this to match your CSS transition duration
+    }, 3000); // Loader stays visible for 10 seconds before fading out
   });
 </script>
 
