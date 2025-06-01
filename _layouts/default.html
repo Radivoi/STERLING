@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+
+<div id="loader">
+  <div class="brick"></div>
+  <div class="brick"></div>
+  <div class="brick"></div>
+  <div class="brick"></div>
+  <div class="brick"></div>
+  <p class="loader-message">Let's build together...</p>
+</div>
+<style>
+/* Loader message */
+#loader .loader-message {
+  position: absolute;
+  bottom: 35%; /* Position the message near the bottom of the loader */
+  color: #fff; /* White text color */
+  font-size: 1.5em; /* Adjust font size */
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Match site font */
+  text-align: center;
+  animation: fade-in 2s infinite; /* Optional: Add a subtle fade-in animation */
+}
+
+/* Fade-in animation for the message */
+@keyframes fade-in {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+/* Loader container */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1A1A1A; /* Background color for the loader */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  flex-wrap: wrap;
+}
+
+/* Bricks */
+#loader .brick {
+  width: 60px;
+  height: 30px;
+  margin: 2px;
+  background-color: #C4431C;
+  border: 2px solid #bfb2b2; /* Brick border for a masonry look */
+  box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.2); /* Adds depth to the brick */
+  animation: stack-bricks 1.5s infinite ease-in-out;
+}
+
+/* Animations for each brick */
+#loader .brick:nth-child(1) {
+  animation-delay: 0s;
+}
+#loader .brick:nth-child(2) {
+  animation-delay: 0.2s;
+}
+#loader .brick:nth-child(3) {
+  animation-delay: 0.4s;
+}
+#loader .brick:nth-child(4) {
+  animation-delay: 0.6s;
+}
+#loader .brick:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+/* Keyframes for stacking bricks from top to bottom */
+@keyframes stack-bricks {
+  0% {
+    transform: translateY(-50px); /* Start above */
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0); /* Move to position */
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0); /* Stay in position */
+    opacity: 1;
+  }
+}
+</style>
+<script>
+  window.addEventListener("load", function () {
+    const loader = document.getElementById("loader");
+    // Wait before starting fade-out
+    setTimeout(() => {
+      loader.style.opacity = "0"; // Start fade out
+      setTimeout(() => {
+        loader.style.display = "none"; // Remove from DOM after fade-out
+      }, 600); // Adjust this to match your CSS transition duration
+    }, 3000); // Loader stays visible for 10 seconds before fading out
+  });
+</script>
+
+<body id="page-top" class="index fade-in">
+  {% include nav.html %}
+  {% include header.html %}
+  {% include portfolio_grid.html %}
+  {% include about.html %}
+
+  {% if site.contact == "static" %}
+  {% include contact_static.html %}
+  {% elsif site.contact == "disqus" %}
+  {% include contact_disqus.html %}
+  {% else %}
+  {% include contact.html %}
+  {% endif %}
+
+  {% include footer.html %}
+  {% include modals.html %}
+  {% include js.html %}
+</body>
+
+</html>
