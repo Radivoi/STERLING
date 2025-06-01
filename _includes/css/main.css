@@ -543,6 +543,6 @@ img.img-responsive {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fff;
+  background: #{{ site.color.secondary}};
   z-index: 9999; 
 }
