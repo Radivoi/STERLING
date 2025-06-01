@@ -1,0 +1,154 @@
+<!-- Navigation -->
+<div id="announcement-bar" class="announcement-bar container" style="background-color: #{{ site.color.primary }}; padding-top: 5px; padding-bottom: 5px;"> 
+    <a href="mailto:example@example.com" style="margin-right: 20px; color: #333; text-decoration: none;">example@example.com</a>
+    <a href="tel:+1234567890" style="color: #333; text-decoration: none;">+1 (234) 567-890</a>
+</div>
+<style>
+  .announcement-bar {
+    background-color: #f8d7da;
+    color: #721c24;
+    text-align: right;
+    font-weight: bold;
+    padding: 10px 0;
+    width: 100%;
+  }
+  @media(max-width:767px) {
+    .announcement-bar {
+      text-align: center;
+    }
+  }
+  .navbar-fixed-top {
+    margin-top: 30px; /* Adjust this value to match the height of the announcement-bar */
+  }
+
+.navbar-toggle {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+.navbar-toggle span {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+  
+.navbar-toggle span:nth-child(1) {
+  top: 0px;
+}
+
+.navbar-toggle span:nth-child(2), .navbar-toggle span:nth-child(3) {
+  top: 18px;
+}
+
+.navbar-toggle span:nth-child(4) {
+  top: 36px;
+}
+
+.navbar-toggle:not(.collapsed) span:nth-child(1) {
+  top: 18px;
+  width: 100%;
+  left: 0;
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform: scaleX(0);
+}
+
+.navbar-toggle:not(.collapsed) span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.navbar-toggle:not(.collapsed) span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.navbar-toggle:not(.collapsed) span:nth-child(4) {
+  top: 18px;
+  width: 100%;
+  left: 0;
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform: scaleX(0);
+}
+
+</style>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+     
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="icon-bar"></span>
+        <span class="icon-bar" style="margin-bottom: -6px;"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#page-top">{{ site.title }}</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="hidden">
+          <a href="#page-top"></a>
+        </li>
+        <li class="page-scroll">
+          <a href="#portfolio">Portfolio</a>
+        </li>
+        <li class="page-scroll">
+          <a href="#about">About</a>
+        </li>
+        <li class="page-scroll">
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+
+<script>
+  document.addEventListener('scroll', function () {
+    const announcementBar = document.getElementById('announcement-bar');
+    const navbar = document.querySelector('.navbar-fixed-top');
+    const announcementBarHeight = announcementBar.offsetHeight;
+
+    if (window.scrollY > announcementBarHeight) {
+      navbar.style.position = 'fixed';
+      navbar.style.marginTop = '0';
+    } else {
+      navbar.style.position = 'absolute';
+      navbar.style.marginTop = `${announcementBarHeight}px`;
+    }
+  });
+
+  // Initialize the navbar position on page load
+  window.addEventListener('load', function () {
+    const announcementBar = document.getElementById('announcement-bar');
+    const navbar = document.querySelector('.navbar-fixed-top');
+    const announcementBarHeight = announcementBar.offsetHeight;
+
+    navbar.style.position = 'absolute';
+    navbar.style.marginTop = `${announcementBarHeight}px`;
+  });
+</script>
