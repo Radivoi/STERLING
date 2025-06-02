@@ -124,15 +124,17 @@
 }
 </style>
 <script>
+  // Disable scroll before loader is gone
+  document.documentElement.style.overflow = "hidden";
   window.addEventListener("load", function () {
     const loader = document.getElementById("loader");
-    // Wait before starting fade-out
     setTimeout(() => {
       loader.style.opacity = "0"; // Start fade out
       setTimeout(() => {
         loader.style.display = "none"; // Remove from DOM after fade-out
-      }, 600); // Adjust this to match your CSS transition duration
-    }, 3000); // Loader stays visible for 10 seconds before fading out
+        document.documentElement.style.overflow = ""; // Re-enable scroll
+      }, 600); // Match fade-out duration
+    }, 3000); // Loader stays visible for 3 seconds before fading out
   });
 </script>
 
@@ -329,6 +331,8 @@
               <i class="fa fa-search-plus fa-3x"></i>
             </div>
           </div>
+          <div class="corner-badge"></div>
+          <img src="img/zoom.svg" alt="Zoom Icon" class="zoom-icon">
           <img src="img/portfolio/masonry1.png" class="img-responsive" alt="image-alt">
         </a>
       </div>
@@ -340,17 +344,21 @@
               <i class="fa fa-search-plus fa-3x"></i>
             </div>
           </div>
+          <div class="corner-badge"></div>
+          <img src="img/zoom.svg" alt="Zoom Icon" class="zoom-icon">
           <img src="img/portfolio/masonry2.png" class="img-responsive" alt="image-alt">
         </a>
       </div>
       
-      <div class="portfolio-flex-item portfolio-item">
+      <div class="portfolio-flex-item portfolio-item" style="position: relative;">
         <a href="#portfolioModal-3" class="portfolio-link" data-toggle="modal">
           <div class="caption">
             <div class="caption-content">
               <i class="fa fa-search-plus fa-3x"></i>
             </div>
           </div>
+          <div class="corner-badge"></div>
+          <img src="img/zoom.svg" alt="Zoom Icon" class="zoom-icon">
           <img src="img/portfolio/masonry3.png" class="img-responsive" alt="image-alt">
         </a>
       </div>

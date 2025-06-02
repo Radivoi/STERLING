@@ -535,14 +535,46 @@ img.img-responsive {
     place-self: stretch;
 }
 #loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #{{ site.color.secondary}};
-  z-index: 9999; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #{{ site.color.secondary}};
+    z-index: 9999; 
+}
+.zoom-icon {
+    position: absolute; 
+    top: -2px;
+    left: -2px; 
+    width: 32px; 
+    height: 32px; 
+    z-index: 2; 
+    pointer-events: none;
+}
+.corner-badge {
+    position: absolute;
+    left: -40px;
+    top: -40px;
+    width: 80px;
+    height: 80px;
+    background-color: black;
+    transform: rotate(45deg);
+    border: 0.5px solid white;
+}
+.portfolio-link {
+    overflow: hidden;
+}
+.modal-open {
+    overflow-y: hidden;
+}
+.portfolio-flex-item.portfolio-item {
+    border: 5px solid black;
+    border-radius: 10px;
+}
+.img-responsive {
+    max-height: 289px !important;
 }
