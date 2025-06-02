@@ -581,3 +581,21 @@ img.img-responsive {
 .img-responsive {
     max-height: 289px !important;
 }
+.brick-border-wrapper {
+    display: flex;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    column-gap: 30px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    gap: 2px;
+}
+.brick-border {
+    width: 40px;
+    height: 16px;
+    background: #C4431C;
+    border: 3px solid #000;
+}
