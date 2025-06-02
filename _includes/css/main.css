@@ -533,6 +533,8 @@ hr.star-primary::after {
 img.img-responsive {
     max-height: 300px;
     place-self: stretch;
+    border: 0.5px solid white;
+    border-radius: 5px;
 }
 #loader {
     position: fixed;
@@ -574,6 +576,7 @@ img.img-responsive {
 .portfolio-flex-item.portfolio-item {
     border: 5px solid black;
     border-radius: 10px;
+    overflow: hidden;
 }
 .img-responsive {
     max-height: 289px !important;
