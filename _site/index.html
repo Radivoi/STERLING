@@ -124,17 +124,17 @@
 }
 </style>
 <script>
-  // Disable scroll before loader is gone
+  // Controls the loader visibility and animation
   document.documentElement.style.overflow = "hidden";
   window.addEventListener("load", function () {
     const loader = document.getElementById("loader");
     setTimeout(() => {
-      loader.style.opacity = "0"; // Start fade out
+      loader.style.opacity = "0";
       setTimeout(() => {
-        loader.style.display = "none"; // Remove from DOM after fade-out
-        document.documentElement.style.overflow = ""; // Re-enable scroll
-      }, 600); // Match fade-out duration
-    }, 3000); // Loader stays visible for 3 seconds before fading out
+        loader.style.display = "none";
+        document.documentElement.style.overflow = "";
+      }, 600);
+    }, 3000);
   });
 </script>
 
@@ -350,7 +350,7 @@
         </a>
       </div>
       
-      <div class="portfolio-flex-item portfolio-item" style="position: relative;">
+      <div class="portfolio-flex-item portfolio-item">
         <a href="#portfolioModal-3" class="portfolio-link" data-toggle="modal">
           <div class="caption">
             <div class="caption-content">

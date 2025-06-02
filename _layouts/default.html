@@ -91,15 +91,17 @@
 }
 </style>
 <script>
+  // Controls the loader visibility and animation
+  document.documentElement.style.overflow = "hidden";
   window.addEventListener("load", function () {
     const loader = document.getElementById("loader");
-    // Wait before starting fade-out
     setTimeout(() => {
-      loader.style.opacity = "0"; // Start fade out
+      loader.style.opacity = "0";
       setTimeout(() => {
-        loader.style.display = "none"; // Remove from DOM after fade-out
-      }, 600); // Adjust this to match your CSS transition duration
-    }, 3000); // Loader stays visible for 10 seconds before fading out
+        loader.style.display = "none";
+        document.documentElement.style.overflow = "";
+      }, 600);
+    }, 3000);
   });
 </script>
 
