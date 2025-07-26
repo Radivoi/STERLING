@@ -330,7 +330,9 @@ section.success hr.star-light:after, section.success hr.star-light {
     padding-bottom: .5em;
     border-bottom: 1px solid #{{ site.color.secondary}};
 }
-
+.modal-body {
+  overflow-x: hidden;
+}
 .floating-label-form-group input,
 .floating-label-form-group textarea {
     z-index: 1;
@@ -389,12 +391,12 @@ footer h3 {
 }
 
 footer .footer-above {
-    padding-top: 50px;
+    padding-top: 10px;
     background-color: #{{ site.color.secondary }};
 }
 
 footer .footer-col {
-    margin-bottom: 50px;
+    margin-bottom: 0px;
 }
 
 footer .footer-below {
@@ -443,8 +445,14 @@ footer .footer-below {
     outline: 0;
 }
 
+.portfolio-modal {
+  overflow: auto;
+}
+
 .portfolio-modal .modal-content {
     padding: 100px 0;
+    padding-top: 20px !important;
+    padding-bottom: 0px !important;
     min-height: 100%;
     border: 0;
     border-radius: 0;
@@ -466,15 +474,27 @@ footer .footer-below {
 .portfolio-modal .modal-content .item-details {
     margin: 30px 0;
 }
-
+.footer-col.col-md-6 {
+  width: 100%;
+}
 .portfolio-modal .close-modal {
+    display: none;
     position: absolute;
-    top: 25px;
-    right: 25px;
-    width: 75px;
-    height: 75px;
+    z-index: 2;
+    top: 0px;
+    right: 0px;
+    width: 50px;
+    height: 50px;
     background-color: transparent;
     cursor: pointer;
+}
+
+[data-dismiss="modal"] {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .portfolio-modal .close-modal:hover {
@@ -484,7 +504,7 @@ footer .footer-below {
 .portfolio-modal .close-modal .lr {
     z-index: 1051;
     width: 1px;
-    height: 75px;
+    height: 50px;
     margin-left: 35px;
     background-color: #{{ site.color.secondary }};
     -webkit-transform: rotate(45deg);
@@ -495,7 +515,7 @@ footer .footer-below {
 .portfolio-modal .close-modal .lr .rl {
     z-index: 1052;
     width: 1px;
-    height: 75px;
+    height: 50px;
     background-color: #{{ site.color.secondary }};
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
@@ -530,8 +550,12 @@ hr.star-primary::after {
     color: #{{ site.color.secondary-dark}};
     background: #{{ site.color.primary}};
 }
+.modal-body img {
+    max-width: 400px;
+}
 img.img-responsive {
     max-height: 300px;
+    min-width: 300px;
     place-self: stretch;
     border: 0.5px solid white;
     border-radius: 5px;
@@ -577,6 +601,9 @@ img.img-responsive {
     border: 5px solid black;
     border-radius: 10px;
     overflow: hidden;
+    max-width: fit-content;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 .img-responsive {
     max-height: 289px !important;
