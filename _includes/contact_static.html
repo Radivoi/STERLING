@@ -49,6 +49,16 @@
             <div class="form-group col-xs-12">
               <button id="my-form-button" type="submit" class="btn btn-success btn-lg">Send</button>
               <p id="my-form-status"></p>
+              <audio id="click-sound-submit" src="mouse-click.mp3" preload="auto"></audio>
+              <script>
+                document.getElementById('my-form-button').addEventListener('click', function() {
+                  var audio = document.getElementById('click-sound-submit');
+                  audio.volume = 0.2;
+                  audio.currentTime = 0;
+                  audio.play();
+                  this.blur();
+                });
+              </script>
             </div>
           </div>
         </form>
