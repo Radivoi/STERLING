@@ -129,6 +129,7 @@ header .intro-text .skills {
     padding: 5px;
     font-weight: 800;
     border-radius: 5px;
+    font-style: italic;
 }
 
 @media(max-width:767px) {
@@ -643,7 +644,7 @@ img.img-responsive {
     }
 }
 .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open>.dropdown-toggle.btn-success {
-    border-color:#C4431C;
+    border-color:#b23214;
 }
 div#announcement-bar {
     text-decoration: underline;
@@ -667,4 +668,7 @@ li i {
         justify-content: center !important;
         flex-wrap: wrap;
     }
+}
+.btn-success {
+    border-width: 4px !important;
 }
