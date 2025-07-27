@@ -659,3 +659,12 @@ div#announcement-bar {
 li i {
     margin-right: 10px;
 }
+.col-lg-5 {
+    width: fit-content !important;
+}
+@media (max-width: 768px) {
+    .skills-container {
+        justify-content: center !important;
+        flex-wrap: wrap;
+    }
+}
