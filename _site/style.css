@@ -90,7 +90,7 @@ header {
 }
 
 header .container {
-    padding-top: 100px;
+    padding-top: 80px;
     padding-bottom: 20px;
     background-image: url('img/brickwallbanner.jpg');
     background-size: cover;
@@ -141,7 +141,7 @@ header .intro-text .skills {
 
 @media(min-width:768px) {
     header .container {
-        padding-top: 100px;
+        padding-top: 80px;
     }
 
     header .intro-text .name {
@@ -202,7 +202,7 @@ header .intro-text .skills {
 }
 
 section {
-    padding: 40px 0;
+    padding: 30px 0;
 }
 
 section h2 {
@@ -567,7 +567,6 @@ hr.star-primary::after {
 }
 img.img-responsive {
     max-height: 300px;
-    min-width: 300px;
     place-self: stretch;
     border: 0.5px solid white;
     border-radius: 5px;
@@ -637,4 +636,15 @@ img.img-responsive {
     height: 16px;
     background: #C4431C;
     border: 3px solid #000;
+}
+@media (max-width: 500px) {
+    .navbar-brand {
+        padding: 10px 15px 20.5px;
+    }
+}
+.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open>.dropdown-toggle.btn-success {
+    border-color:#C4431C;
+}
+div#announcement-bar {
+    text-decoration: underline;
 }
