@@ -655,6 +655,7 @@ li i {
 }
 .col-lg-5 {
     width: fit-content !important;
+    min-width: 300px;
 }
 @media (max-width: 768px) {
     .skills-container {
