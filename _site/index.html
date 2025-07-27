@@ -8,7 +8,7 @@
   <meta name="description" content="Sterling Brick & Stone Masonry is a family owned and operated business serving the Waterloo region. We specialize in all types of masonry work, including brick, stone, and concrete. Our team of skilled craftsmen are dedicated to providing the highest quality workmanship and customer service. Whether you need a new patio, walkway, or retaining wall, we have the experience and expertise to get the job done right.">
   <meta name="keywords" content="your keywords, separated by commas" />
   
-  <meta name="author" content="LastName FirstName">
+  <meta name="author" content="Radivoi Michael">
   <link rel="canonical" href="http://localhost:4000/">
   <link rel="alternate" type="application/rss+xml" title="RSS" href="feed.xml">
 
@@ -308,13 +308,23 @@
           <span class="name">Sterling Brick & Stone Masonry</span>
           <hr class="star-light" />
           -->
-          <span class="skills">Built on Integrity - Crafted with Expertise.</span>
+          <span class="skills">Built on Integrity - crafted with Expertise.</span>
         </div>
         <div class="col-xs-12" style="margin-top: 20px;">
           <span class="page-scroll">
-          <a class="btn btn-success btn-lg" href="#contact">Get a free quote!</a>
-          <p id="my-form-status"></p>
+            <a class="btn btn-success btn-lg" href="#contact" id="quote-btn">Get a free quote!</a>
+            <p id="my-form-status"></p>
           </span>
+          <audio id="click-sound" src="mouse-click.mp3" preload="auto"></audio>
+          <script>
+            document.getElementById('quote-btn').addEventListener('click', function() {
+              var audio = document.getElementById('click-sound');
+              audio.volume = 0.2;
+              audio.currentTime = 0;
+              audio.play();
+              this.blur();
+            });
+          </script>
         </div>
       </div>
     </div>
