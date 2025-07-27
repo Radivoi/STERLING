@@ -641,3 +641,14 @@ img.img-responsive {
 div#announcement-bar {
     text-decoration: underline;
 }
+.portfolio-flex-item.portfolio-item {
+    min-width: 300px;
+}
+.list-unstyled {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+li i {
+    margin-right: 10px;
+}
