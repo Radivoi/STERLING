@@ -3,15 +3,21 @@
 <div class="portfolio-modal modal fade" id="portfolioModal-{{ post.modal-id }}" tabindex="-1" role="dialog"
   aria-hidden="true">
   <div class="modal-content">
-    <button type="button" class="btn btn-default" data-dismiss="modal" style="position: sticky; float: right; z-index: 1051;">
-      <i class="fa fa-times"></i> Close
-    </button>
+    <div style="position: sticky; float: right; z-index: 1051; top: 0;">
+      <button type="button" class="btn btn-default" data-dismiss="modal">
+        <i class="fa fa-times"></i> Close
+      </button>
+    </div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
           <div class="modal-body">
             <h2>{{ post.title }}</h2>
-            <hr class="star-primary">
+            <div class="brick-border-wrapper">
+              {% for i in (1..7) %}
+                <div class="brick-border"></div>
+              {% endfor %}
+            </div>
             <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}">
             {% if post.description %}
             <p>{{ post.description }}</p>
