@@ -636,7 +636,6 @@ img.img-responsive {
         padding: 10px 15px 20.5px;
     }
 }
-<link rel="stylesheet" href="/_includes/css/main.css">
 .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open>.dropdown-toggle.btn-success,
 .btn-quote:hover, .btn-quote:focus, .btn-quote:active, .btn-quote.active, .open>.dropdown-toggle.btn-quote {
     border-color:#b23214;
