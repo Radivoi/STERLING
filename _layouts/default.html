@@ -121,6 +121,28 @@
 
   {% include footer.html %}
   {% include modals.html %}
+
+    <!-- jQuery Version 1.11.0 -->
+<script src="{{ 'jquery-1.11.0.js' }}"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="{{ 'bootstrap.min.js' }}"></script>
+<script src="{{ 'jquery.easing.min.js' }}"></script>
+<!-- Classie.js and cbpAnimatedHeader.js are not used in this template, but if needed, uncomment the line below
+<script src="{{ 'classie.js' }}"></script>
+<script src="{{ 'cbpAnimatedHeader.js' }}"></script>
+-->
+<!-- Contact Form JavaScript -->
+<script src="{{ 'jqBootstrapValidation.js' }}"></script>
+{% if site.contact == "static" %}
+<script src="{{ 'contact_me_static.js' }}"></script>
+{% else %}
+<script src="{{ 'contact_me.js' }}"></script>
+{% endif %}
+
+<!-- Custom Theme JavaScript -->
+<script src="{{ 'freelancer.js' }}"></script>
+
 </body>
 
 </html>
